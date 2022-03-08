@@ -1,0 +1,5 @@
+# requirements to install with pip
+jupyter
+
+# add any requirements your notebook needs here and they will be installed
+# when the container is built
