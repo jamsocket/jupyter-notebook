@@ -35,6 +35,10 @@ npx serve
 
 And then visit `localhost:3000/spawn.html` in your browser.
 
+## Jamsocket Guide
+
+For more information about the Jamsocket platform, check out our [Early User Guide](https://drifting.notion.site/Jamsocket-early-user-guide-5148f81e34744e77bc6b8b305eb3ea75).
+
 ## Customization
 
 Place whatever notebook code you'd like to run in the `notebook` directory, and add any pip-installable dependencies to `requirements.txt`.
