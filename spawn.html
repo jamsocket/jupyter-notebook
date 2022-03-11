@@ -122,7 +122,7 @@
 
       const SPAWN_TOKEN = '[SPAWN TOKEN HERE]'
       const SPAWN_ENV = {
-        JAMSOCKET_JUPYTER_TOKEN: '[SET JUPYTER PASSWORD HERE]'
+        JAMSOCKET_JUPYTER_TOKEN: 'asdf'
       }
       spawn(SPAWN_TOKEN, SPAWN_ENV).then(url => {
         document.location = `${url}?token=${encodeURIComponent(SPAWN_ENV.JAMSOCKET_JUPYTER_TOKEN)}`
