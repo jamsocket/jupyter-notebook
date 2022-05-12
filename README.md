@@ -36,7 +36,7 @@ open spawn.html
 
 ## Jamsocket Guide
 
-For more information about the Jamsocket platform, check out our [docs](https://docs.jamsocket.dev/).
+For more information about the Jamsocket platform, check out our [docs](https://docs.jamsocket.com/).
 
 ## Customization
 
