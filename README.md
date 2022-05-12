@@ -36,7 +36,7 @@ open spawn.html
 
 ## Jamsocket Guide
 
-For more information about the Jamsocket platform, check out our [Early User Guide](https://drifting.notion.site/Jamsocket-early-user-guide-5148f81e34744e77bc6b8b305eb3ea75).
+For more information about the Jamsocket platform, check out our [docs](https://docs.jamsocket.dev/).
 
 ## Customization
 
