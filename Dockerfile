@@ -7,7 +7,7 @@ RUN useradd -m jupyter
 USER jupyter
 WORKDIR /home/jupyter
 
-COPY notebook ./notebook
+COPY --chown=jupyter notebook ./notebook
 COPY run.sh ./
 
 WORKDIR /home/jupyter/notebook
