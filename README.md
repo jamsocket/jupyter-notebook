@@ -50,9 +50,9 @@ Provide a password as the `JAMSOCKET_JUPYTER_TOKEN` environment variable. This i
 npx jamsocket spawn jupyter-notebook --env '{"JAMSOCKET_JUPYTER_TOKEN":"[SET JUPYTER PASSWORD HERE]"}'
 ```
 
-## To run the jupyter-notebook locally:
+## To run the jupyter-notebook locally for testing:
 
 ```bash
-docker run -p 8080:8080 --env JAMSOCKET_JUPYTER_TOKEN=password123 -it jupyter-notebook
+docker run -p 8080:8080 --env JAMSOCKET_JUPYTER_TOKEN=password123 --env PORT=8080 -it jupyter-notebook
 open localhost:8080?token=password123
 ```
