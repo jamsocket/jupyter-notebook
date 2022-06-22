@@ -2,4 +2,5 @@
 jupyter
 
 # add any requirements your notebook needs here and they will be installed
-# when the container is built
+# when the container is built. You can generate these requirements from an
+# existing python environment by running `pip freeze`.
