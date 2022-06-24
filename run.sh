@@ -1,7 +1,10 @@
 #!/bin/sh
 
 jupyter notebook --generate-config
-echo "c.NotebookApp.token = '$JAMSOCKET_JUPYTER_TOKEN'" >> ~/.jupyter/jupyter_notebook_config.py
+
+# protect your notebook with a password on the following line:
+JUPYTER_NOTEBOOK_PASSWORD=""
+echo "c.NotebookApp.token = '$JUPYTER_NOTEBOOK_PASSWORD'" >> ~/.jupyter/jupyter_notebook_config.py
 
 # provide the notebook you want to start Jupyter with on the following line:
 NOTEBOOK="hello-tmpenv.ipynb"
