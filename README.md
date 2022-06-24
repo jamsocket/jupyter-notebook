@@ -7,7 +7,7 @@ Base repo for running Jupyter Notebooks on the Jamsocket platform
 2. Add your notebook(s) to the `/notebook` directory.
 3. Add your notebook's python dependencies to `requirements.txt`.
 4. Update the `NOTEBOOK` value in `run.sh` to make sure Jupyter opens your notebook on start up. 
-5. Add `JAMSOCKET_USER` and `JAMSOCKET_TOKEN` values to your GitHub secrets. (Contact us to get Jamsocket credentials.)
+5. Add `JAMSOCKET_USER` and `JAMSOCKET_TOKEN` values to your GitHub secrets. ([Contact us](mailto:hi@driftingin.space) to get Jamsocket credentials.)
 6. Push your repo to your GitHub account, and your Jupyter Notebook container will be automatically built and pushed to Jamsocket.
 7. Get a Spawn URL from us.
 
