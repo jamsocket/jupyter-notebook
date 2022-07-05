@@ -1,6 +1,8 @@
 #!/bin/sh
 
-jupyter notebook --generate-config
+set -e
+
+/home/jupyter/notebook-env/bin/jupyter notebook --generate-config
 
 # protect your notebook with a password on the following line:
 JUPYTER_NOTEBOOK_PASSWORD=""
@@ -13,4 +15,4 @@ echo "c.NotebookApp.default_url = '/notebooks/$NOTEBOOK'" >> ~/.jupyter/jupyter_
 # to embed the jupyter notebook in an iframe, uncomment the following line and edit your domain
 # echo "c.NotebookApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors \'self\' [YOUR DOMAIN];'}}" >> ~/.jupyter/jupyter_notebook_config.py
 
-jupyter notebook --ip 0.0.0.0 --port $PORT --no-browser
+/home/jupyter/notebook-env/bin/jupyter notebook --ip 0.0.0.0 --port $PORT --no-browser
