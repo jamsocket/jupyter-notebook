@@ -3,9 +3,9 @@ jupyter
 
 # optional requirements -- these will be installed with pip
 penkit==0.0.8
-numpy==1.23.1
-scipy==1.8.1
-matplotlib==3.5.2
+numpy==1.23.4
+scipy==1.9.3
+matplotlib==3.6.1
 
 # add any requirements your notebook needs here and they will be installed
 # when the container is built. You can generate these requirements from an
