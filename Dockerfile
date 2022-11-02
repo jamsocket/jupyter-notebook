@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.11.0-buster
 
 RUN useradd -m jupyter
 USER jupyter
