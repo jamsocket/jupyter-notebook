@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: new.jamcr.io
-  IMAGE_NAME: ${{ secrets.JAMSOCKET_USER }}/jupyter-notebook
+  IMAGE_NAME: ${{ secrets.JAMSOCKET_ACCOUNT }}/jupyter-notebook
 
 jobs:
   build:
@@ -22,13 +22,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Set JAMCR_USER from token
+        env:
+          JAMSOCKET_TOKEN: ${{ secrets.JAMSOCKET_TOKEN }}
+        id: token_public
+        run: echo "JAMCR_USER=${JAMSOCKET_TOKEN%\.*}" >> $GITHUB_ENV
+
+      - name: Set JAMCR_PASS from token
+        env:
+          JAMSOCKET_TOKEN: ${{ secrets.JAMSOCKET_TOKEN }}
+        id: token_secret
+        run: echo "JAMCR_PASS=${JAMSOCKET_TOKEN#*\.}" >> $GITHUB_ENV
+
       - name: Log into registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.JAMSOCKET_USER }}
-          password: ${{ secrets.JAMSOCKET_TOKEN }}
+          username: ${{ env.JAMCR_USER }}
+          password: ${{ env.JAMCR_PASS }}
 
       - name: Extract Docker metadata
         id: meta
