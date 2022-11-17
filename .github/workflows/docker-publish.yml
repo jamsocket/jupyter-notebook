@@ -22,12 +22,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # this splits the JAMSOCKET_TOKEN on a period and takes the first portion as the docker registry user
       - name: Set JAMCR_USER from token
         env:
           JAMSOCKET_TOKEN: ${{ secrets.JAMSOCKET_TOKEN }}
         id: token_public
         run: echo "JAMCR_USER=${JAMSOCKET_TOKEN%\.*}" >> $GITHUB_ENV
 
+      # this splits the JAMSOCKET_TOKEN on a period and takes the second portion as the docker registry pass
       - name: Set JAMCR_PASS from token
         env:
           JAMSOCKET_TOKEN: ${{ secrets.JAMSOCKET_TOKEN }}
