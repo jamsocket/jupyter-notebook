@@ -11,10 +11,13 @@ RUN /home/jupyter/notebook-env/bin/pip install --upgrade pip
 RUN /home/jupyter/notebook-env/bin/pip install -r requirements.txt
 
 COPY --chown=jupyter notebook ./notebook
-COPY run.sh ./
+COPY config.sh ./
+RUN ./config.sh
 
 ENV PATH=/home/jupyter/notebook-env/bin:$PATH
 
 WORKDIR /home/jupyter/notebook
 
-CMD ["../run.sh"]
+ENV PYDEVD_DISABLE_FILE_VALIDATION=1
+
+CMD /home/jupyter/notebook-env/bin/jupyter notebook --ip 0.0.0.0 --port $PORT --no-browser --NotebookApp.token=""
