@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 jupyter = "*"
-penkit = "*"
-numpy = "*"
-scipy = "*"
 matplotlib = "*"
+numpy = "*"
+penkit = "*"
+scipy = "*"
 
 [dev-packages]
 

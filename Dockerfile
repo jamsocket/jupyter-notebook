@@ -14,6 +14,8 @@ COPY --chown=jupyter notebook ./notebook
 COPY config.sh ./
 RUN ./config.sh
 
+RUN /home/jupyter/notebook-env/bin/ipython profile create default
+
 ENV PATH=/home/jupyter/notebook-env/bin:$PATH
 
 WORKDIR /home/jupyter/notebook
