@@ -1,12 +1,5 @@
-# necessary requirements
-jupyter
-
-# optional requirements -- these will be installed with pip
-penkit==0.0.8
-numpy==1.23.4
-scipy==1.9.3
-matplotlib==3.6.1
-
-# add any requirements your notebook needs here and they will be installed
-# when the container is built. You can generate these requirements from an
-# existing python environment by running `pip freeze`.
+notebook @ git+https://github.com/jupyter/notebook@466b6bf2d7532f58e8e2861f350fd93e781c3ed3
+pandas
+scipy
+numpy
+matplotlib
