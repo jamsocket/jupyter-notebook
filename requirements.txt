@@ -1,1 +1,5 @@
-notebook==7.0.0b0
+notebook @ git+https://github.com/jupyter/notebook@466b6bf2d7532f58e8e2861f350fd93e781c3ed3
+pandas
+scipy
+numpy
+matplotlib
