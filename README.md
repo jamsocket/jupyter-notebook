@@ -15,7 +15,7 @@ Base repo for running Jupyter Notebooks on the Jamsocket platform
 
 ## Restricting access
 
-Use Jamsocket's [backend authentication](https://docs.jamsocket.com/backend-authentication/) to restrict access by bearer token.
+Use Jamsocket's [backend authentication](https://docs.jamsocket.com/concepts/auth-with-backend/) to restrict access by bearer token.
 
 ## To run the jupyter-notebook locally for testing:
 
