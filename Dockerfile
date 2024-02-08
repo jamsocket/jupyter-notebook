@@ -3,6 +3,7 @@ FROM python:3.11.3-slim
 # This entire section is only needed while we are using notebook directly from git instead of pypi.
 # If it were permanent, we would want to do a multi-stage built, but it's not.
 RUN apt-get update
+RUN apt-get install -y build-essential
 RUN apt-get install -y git
 RUN apt-get install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
@@ -35,5 +36,6 @@ CMD /home/jupyter/notebook-env/bin/jupyter \
     --ip 0.0.0.0 \
     --port $PORT \
     --no-browser \
-    --NotebookApp.token="" \
+    --ServerApp.token="" \
+    --ServerApp.base_url="${SESSION_BACKEND_STATIC_TOKEN}" \
     --JupyterNotebookApp.default_url="/notebooks/hello-jamsocket.ipynb"
