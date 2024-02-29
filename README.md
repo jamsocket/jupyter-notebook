@@ -13,10 +13,6 @@ Base repo for running Jupyter Notebooks on the Jamsocket platform
 8. Push your repo to your GitHub account, and your Jupyter Notebook container will be automatically built and pushed to Jamsocket.
 9. Get a Spawn URL from us. (Open this URL in a browser to start a new notebook instance.)
 
-## Restricting access
-
-Use Jamsocket's [backend authentication](https://docs.jamsocket.com/concepts/auth-with-backend/) to restrict access by bearer token.
-
 ## To run the jupyter-notebook locally for testing:
 
 ```bash
