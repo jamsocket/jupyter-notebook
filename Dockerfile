@@ -32,7 +32,7 @@ ENV PATH=/home/jupyter/notebook-env/bin:$PATH
 WORKDIR /home/jupyter/notebook
 
 CMD /home/jupyter/notebook-env/bin/jupyter \
-    notebook \
+    ${JUPYTER_SUBCOMMAND:-notebook} \
     --ip 0.0.0.0 \
     --port $PORT \
     --no-browser \

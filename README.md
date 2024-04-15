@@ -20,3 +20,7 @@ docker build -t jupyter-notebook .
 docker run -p 8080:8080 --env PORT=8080 -it jupyter-notebook
 open localhost:8080
 ```
+
+## Jupyter Lab
+
+By default, this runs the `jupyter notebook` command. If you want to run the `jupyter lab` command instead, you can set the `JUPYTER_SUBCOMMAND` environment variable to `lab`.
