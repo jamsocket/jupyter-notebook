@@ -38,4 +38,4 @@ CMD /home/jupyter/notebook-env/bin/jupyter \
     --no-browser \
     --ServerApp.token="" \
     --ServerApp.base_url="${SESSION_BACKEND_STATIC_TOKEN}" \
-    --JupyterNotebookApp.default_url="/notebooks/hello-jamsocket.ipynb"
+    --JupyterNotebookApp.default_url="/doc/tree/hello-jamsocket.ipynb"
