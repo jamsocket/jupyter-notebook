@@ -31,6 +31,10 @@ ENV PATH=/home/jupyter/notebook-env/bin:$PATH
 
 WORKDIR /home/jupyter/notebook
 
+# https://stackoverflow.com/a/75552789
+CMD /home/jupyter/notebook-env/bin/jupyter \
+    labextension disable "@jupyterlab/apputils-extension:announcements"
+
 CMD /home/jupyter/notebook-env/bin/jupyter \
     ${JUPYTER_SUBCOMMAND:-notebook} \
     --ip 0.0.0.0 \
