@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  REGISTRY: new.jamcr.io
+  REGISTRY: registry.jamsocket.com
   IMAGE_NAME: ${{ secrets.JAMSOCKET_ACCOUNT }}/jupyter-notebook
 
 jobs:

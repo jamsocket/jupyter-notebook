@@ -1,4 +1,4 @@
-FROM python:3.11.3-slim
+FROM python:3.12-slim-bookworm
 
 # This entire section is only needed while we are using notebook directly from git instead of pypi.
 # If it were permanent, we would want to do a multi-stage built, but it's not.
