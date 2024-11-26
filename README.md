@@ -9,7 +9,7 @@ Base repo for running Jupyter Notebooks on the Jamsocket platform
 4. Set your Jamsocket account name as the `JAMSOCKET_ACCOUNT` value in your GitHub secrets.
 5. Generate an access token at [app.jamsocket.com/settings](https://app.jamsocket.com/settings) and set it as the `JAMSOCKET_TOKEN` value in your GitHub secrets.
 6. Push your repo to your GitHub account, and your Jupyter Notebook container will be automatically built and pushed to the Jamsocket service you selected.
-7. [Use the Jamsocket API](https://docs.jamsocket.com/concepts/connection-url) to spawn instances of your notebook. It will return a URL that you can use to access the notebook.
+7. [Use the Jamsocket API](https://docs.jamsocket.com/platform/advanced/connection-url) to spawn instances of your notebook. It will return a URL that you can use to access the notebook.
 
 ## Customizing
 
